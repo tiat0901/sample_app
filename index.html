@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Heroku Command Line | Heroku Dev Center</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.herokucdn.com/favicon.ico">
+
+    <link rel="alternate" type="application/atom+xml" title="Heroku Recent Articles" href="http://feeds.feedburner.com/herokudevcenterarticles">
+    <link rel="alternate" type="application/atom+xml" title="Heroku Changelog" href="http://feeds.feedburner.com/herokuchangelog">
+  <link rel="search" type="application/opensearchdescription+xml" title="Heroku Dev Center" href="/opensearch.xml">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"277498ec79","applicationID":"7135218","transactionName":"JQxeQ0peWVVTQ01UExIKU1tdQhpKXl4V","queueTime":0,"applicationTime":61,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="JsW1LOm5soI9Qke0d0frbyNbVBEunVlH91veEIHrqR8njv3GHCX041jaUABCdNNbvTtWpVlcWggmuTQIHDCVnA==">
+
+  
+
+  <meta name="description" content="How to download, install, and start using, the Heroku CLI. The Heroku CLI used to be part of the Heroku Toolbelt.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@herokudevcenter">
+    <meta name="twitter:title" content="Heroku Command Line | Heroku Dev Center">
+    <meta name="twitter:description" content="How to download, install, and start using, the Heroku CLI. The Heroku CLI used to be part of the Heroku Toolbelt.">
+
+  <meta name="google-site-verification" content="V3T3n-QnyNOZlSVZgEfdXaKkJKyfw2yIP55nR00C8ZU">
+
+
+  <link rel="stylesheet" media="screen, print" href="//d2f2p26ywennn8.cloudfront.net/assets/public-3c000bef33020cbc5ecd4d79546948b05c8ef22443ec85d6f4083c748b175d01.css">
+  
+</head>
+<body>
+<div class="page-wrapper">
+<header><div id="primary-header">
+<nav id="navigation" role="navigation"><span aria-hidden="true" class="mobile-nav">Show nav<span></span><span></span><span></span><span></span></span><div class="wrapper-full">
+<div id="logo"><a class="heroku-brand" href="/">Heroku Dev Center</a></div>
+<div class="nav-wrapper">
+<ul class="main-nav">
+<li class="secondary-links"><ul>
+<li class="getting-started"><a href="/start">Getting Started</a></li>
+<li class="reference"><a href="/categories/reference">Reference</a></li>
+<li class="learning"><a href="/categories/learning">Learning</a></li>
+</ul></li>
+<li class="has-dropdown">
+<a>By Language</a><ul class="dropdown dropdown-sm">
+<li><a href="/categories/nodejs">Node.js</a></li>
+<li><a href="/categories/ruby">Ruby</a></li>
+<li><a href="/categories/java">Java</a></li>
+<li><a href="/categories/php">PHP</a></li>
+<li><a href="/categories/python">Python</a></li>
+<li><a href="/categories/go">Go</a></li>
+<li><a href="/categories/scala">Scala</a></li>
+<li><a href="/categories/clojure">Clojure</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a>Develop</a><ul class="dropdown">
+<li><a href="/categories/heroku-architecture">Heroku Architecture</a></li>
+<li><a href="/categories/features">Features</a></li>
+<li><a href="/categories/command-line">Command Line</a></li>
+<li><a href="/categories/deployment">Deployment</a></li>
+<li><a href="/categories/security">Security</a></li>
+<li><a href="/categories/application-architecture">Application Architecture</a></li>
+<li><a href="/categories/extending-heroku">Extending Heroku</a></li>
+</ul>
+</li>
+<li><a href="/categories/support">Support</a></li>
+<li class="has-dropdown">
+<a class="nav-more">More</a><div class="dropdown more">
+<section class="more-resources"><span class="more-title">Additional Resources</span><ul>
+<li><a href="https://elements.heroku.com/">Elements</a></li>
+<li><a href="https://www.heroku.com/products">Products</a></li>
+<li><a href="https://www.heroku.com/pricing">Pricing</a></li>
+<li><a href="https://www.heroku.com/careers">Careers</a></li>
+<li><a href="https://help.heroku.com/">Help</a></li>
+<li><a href="https://status.heroku.com/">Status</a></li>
+<li><a href="https://www.heroku.com/events">Events</a></li>
+</ul></section><section class="more-blog" id="more-blog"><span class="more-title">Heroku Blog</span><h3><a class="js-blog-link" href="https://blog.heroku.com">Heroku Blog</a></h3>
+<p class="js-blog-date"></p>
+<p class="js-blog-content">Find out what's new with Heroku on our blog.</p>
+<a class="button btn-default btn-sm btn-inline" href="https://blog.heroku.com">Visit Blog</a></section>
+</div>
+</li>
+</ul>
+<ul class="tool-nav">
+<li><div id="search-field-mobile"><form class="search-form" action="/search/raw" accept-charset="UTF-8" method="get">
+<input name="utf8" type="hidden" value="✓"><div class="search-input-group">
+<span class="icon-search"></span><input type="text" name="query" id="query" placeholder="Search" required="required" class="js-search form-control">
+</div>
+</form></div></li>
+<li class="user">
+<a href="/login?back_to=%2Farticles%2Fheroku-command-line">Log in</a><span>or</span><a class="sign-up highlight" data-trackable='{"category":"Sign Up Links","action":"Clicked","label":"dc"}' href="https://signup.heroku.com/dc">Sign up</a>
+</li>
+</ul>
+</div>
+</div></nav><div id="search-field-desktop"><form class="search-form" action="/search/raw" accept-charset="UTF-8" method="get">
+<input name="utf8" type="hidden" value="✓"><div class="search-input-group">
+<span class="icon-search"></span><input type="text" name="query" id="query" placeholder="Search" required="required" class="js-search form-control">
+</div>
+</form></div>
+</div>
+<div id="secondary-header"><div class="page-subnav"><ul class="nav navbar-nav">
+<li class="getting-started"><a href="/start">Getting Started</a></li>
+<li class="reference"><a class=" active" href="/categories/reference">Reference</a></li>
+<li class="learning"><a href="/categories/learning">Learning</a></li>
+</ul></div></div></header><div class="container">
+<div class="js-admin-tabs js-article"></div>
+<div class="col-md-4 sidebar nocontent"><ul class="secondary-nav nav"><li>
+<h2>Reference</h2>
+<ul>
+<li><a href="/categories/heroku-architecture">Heroku Architecture</a></li>
+<li><a href="/categories/features">Features</a></li>
+<li><a class=" active" href="/categories/command-line">Command Line</a></li>
+<li><a href="/categories/deployment">Deployment</a></li>
+<li><a href="/categories/troubleshooting">Troubleshooting</a></li>
+<li><a href="/categories/collaboration">Collaboration</a></li>
+<li><a href="/categories/security">Security</a></li>
+<li><a href="/categories/support">Support</a></li>
+<li><a href="/categories/billing">Accounts &amp; Billing</a></li>
+<li><a href="/categories/organization-accounts">Organization Accounts</a></li>
+</ul>
+<ul><li><a href="/categories/heroku-postgres">Heroku Postgres</a></li></ul>
+<ul><li><a href="/categories/heroku-redis">Heroku Redis</a></li></ul>
+<ul><li><a href="/categories/heroku-connect">Heroku Connect</a></li></ul>
+<ul><li><a href="/categories/devcenter">Dev Center</a></li></ul>
+<ul><li><a href="/categories/labs">Heroku Labs</a></li></ul>
+<ul><li><a href="/categories/language-support">Languages</a></li></ul>
+<ul><li><a href="/categories/extending-heroku">Extending Heroku</a></li></ul>
+<ul><li><a href="/changelog">Changelog</a></li></ul>
+</li></ul></div>
+<div class="col-md-8 content"><article class="js-autolink "><h1>Heroku Command Line</h1>
+<p class="last-updated"><span class="icon-clock"></span>Last updated 07 September 2016</p>
+<div id="table-of-contents">
+<h3>
+<span class="icon-list"></span>Table of Contents</h3>
+<ul>
+<li><a href="#download-and-install">Download and install</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#staying-up-to-date">Staying up to date</a></li>
+<li><a href="#technical-details">Technical details</a></li>
+<li><a href="#uninstalling-the-heroku-cli">Uninstalling the Heroku CLI</a></li>
+</ul>
+</div>
+<p>The Heroku Command Line Interface (CLI), formerly known as the Heroku Toolbelt, is a tool  for creating and managing Heroku apps from the command line / shell of various operating systems.</p>
+
+<h2 id="download-and-install">Download and install</h2>
+
+<h3 id="os-x">OS X</h3>
+
+<p>Download and run the <a href="https://s3.amazonaws.com/assets.heroku.com/heroku-toolbelt/heroku-toolbelt.pkg">OS X installer</a>.</p>
+
+<h3 id="download-and-install-windows">Windows</h3>
+
+<p>Download and run the <a href="https://s3.amazonaws.com/assets.heroku.com/heroku-toolbelt/heroku-toolbelt.exe">Windows installer</a>.</p>
+
+<h3 id="debian-ubuntu">Debian/Ubuntu</h3>
+
+<p>Ensure that you have Ruby installed, and then run this from your terminal:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+</pre></div>
+</div>
+
+
+<h3 id="standalone-version">Standalone version</h3>
+
+<p>Ensure that you have Ruby installed, and then run this from your terminal:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>wget -qO- https://toolbelt.heroku.com/install.sh | sh
+</pre></div>
+</div>
+
+
+<h3 id="verify-your-installation">Verify your installation</h3>
+
+<p>To verify your CLI installation use the <code>heroku --version</code> command.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku --version
+</span><span class="string">heroku-toolbelt/3.43.9 (x86_64-darwin10.8.0) ruby/1.9.3
+</span><span class="string">heroku-cli/5.2.39-010a227 (darwin-amd64) go1.6.2
+</span></pre></div>
+</div>
+
+
+<p>You should see <code>heroku-toolbelt/x.y.z</code> in the output. If you don’t, but have installed the Heroku CLI, it’s possible you have an old heroku gem on your system - <a href="#uninstalling-the-legacy-heroku-gem">uninstall the gem</a>.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>You will be asked to enter your Heroku credentials the first time you run a command; after the first time, your email address and an API token will be saved to <code>~/.netrc</code> for future use. For more information, see <a href="https://devcenter.heroku.com/articles/authentication">Heroku CLI Authentication</a></p>
+
+<p>It’s generally a good idea to login and add your public key immediately after installing the Heroku CLI so that you can use git to push or clone Heroku app repositories:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku login
+</span><span class="string">Enter your Heroku credentials.
+</span><span class="string">Email: adam@example.com
+</span><span class="string">Password (typing will be hidden):
+</span><span class="string">Authentication successful.
+</span></pre></div>
+</div>
+
+
+<p>You’re now ready to create your first Heroku app:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> cd ~/myapp
+</span><span class="prompt">$</span><span class="function"> heroku create
+</span><span class="string">Creating app... done, ⬢ sleepy-meadow-81798
+</span><span class="string">https://sleepy-meadow-81798.herokuapp.com/ | https://git.heroku.com/sleepy-meadow-81798.git
+</span></pre></div>
+</div>
+
+
+<p>Check out our <a href="https://devcenter.heroku.com/start">Getting Started</a> for a comprehensive introduction to deploying your first app.</p>
+
+<h2 id="staying-up-to-date">Staying up to date</h2>
+
+<p>The Heroku CLI will automatically keep itself up to date.</p>
+
+<div class="callout">
+<p>Autoupdate was added to the Heroku CLI in version 2.32.0. If you have an older version, please reinstall the Heroku CLI.</p>
+</div>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>When you run a <code>heroku</code> command, a background process will be spawned that checks a URL for the latest available version of the CLI. If a new version is found, it will be downloaded and stored in <code>~/.heroku/client</code>. This background check will happen at most once every 5 minutes.</p>
+
+<p>The <code>heroku</code> binary will check for updated clients in <code>~/.heroku/client</code> before loading the system-installed version.</p>
+
+<h2 id="technical-details">Technical details</h2>
+
+<p>If you are experiencing issues with logging in, try moving your <code>.netrc</code> file. This is where the CLI stores credentials:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> mv ~/.netrc ~/.netrc.backup
+</span><span class="prompt">$</span><span class="function"> heroku login
+</span></pre></div>
+</div>
+
+
+<p>On Windows the file is named <code>_netrc</code>.</p>
+
+<h2 id="uninstalling-the-heroku-cli">Uninstalling the Heroku CLI</h2>
+
+<h3 id="mac-os-x">Mac OS X</h3>
+
+<p>On Mac OS X, you can uninstall the CLI by typing:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> rm -rf /usr/local/heroku
+</span><span class="prompt">$</span><span class="function"> rm -rf ~/.heroku ~/.local/share/heroku ~/.config/heroku ~/.cache/heroku
+</span></pre></div>
+</div>
+
+
+<h4 id="homebrew">Homebrew</h4>
+
+<p>If you installed the Heroku CLI using Homebrew, you can uninstall the CLI by typing:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> brew uninstall heroku
+</span><span class="prompt">$</span><span class="function"> rm -rf ~/.heroku ~/.local/share/heroku ~/.config/heroku ~/.cache/heroku
+</span></pre></div>
+</div>
+
+
+<h3 id="linux">Linux</h3>
+
+<h4 id="stand-alone-linux-installs">Stand-alone Linux installs</h4>
+
+<p>For stand-alone Linux installs, you can uninstall the CLI by typing:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> rm -rf /usr/local/heroku
+</span><span class="prompt">$</span><span class="function"> rm -rf ~/.heroku ~/.local/share/heroku ~/.config/heroku ~/.cache/heroku
+</span></pre></div>
+</div>
+
+
+<h4 id="debian-and-ubuntu-installs">Debian and Ubuntu installs</h4>
+
+<p>For Debian/Ubuntu, you can uninstall the CLI by typing:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> sudo apt-get remove heroku-toolbelt
+</span><span class="prompt">$</span><span class="function"> sudo rm /etc/apt/sources.list.d/heroku.list
+</span></pre></div>
+</div>
+
+
+<p>If you have <code>$XDG_DATA_HOME</code>, <code>$XDG_CONFIG_HOME</code> and/or <code>$XDG_CACHE_HOME</code> it will use those variables instead of <code>~/.local/share</code>, <code>~/.config/, and</code>~/.cache`, respectively.</p>
+
+<p>You can remove the release key by running these commands:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> sudo apt-key list
+</span><span class="prompt">$</span><span class="function"> sudo apt-key del KEYFROMABOVE
+</span></pre></div>
+</div>
+
+
+<h3 id="uninstalling-the-heroku-cli-windows">Windows</h3>
+
+<p>On Windows, to uninstall the Heroku CLI:</p>
+
+<ol>
+<li>Click <strong>Start</strong> &gt; <strong>Control Panel</strong> &gt; <strong>Programs</strong> &gt; <strong>Programs and Features</strong>.</li>
+<li>Select Heroku CLI, and then click <strong>Uninstall</strong>.</li>
+</ol>
+
+<p>You should also delete the <code>.config/heroku</code> directory inside your home directory.</p>
+
+<p>If this is unsuccessful, manually delete <code>%LOCALAPPDATA%\heroku</code> along with the directory in Program Files.</p>
+
+<h3 id="uninstalling-the-legacy-heroku-gem">Uninstalling the legacy heroku gem</h3>
+
+<p>To find out where the executable is located, run <code>which</code>.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> which heroku
+</span><span class="string">/usr/local/heroku/bin/heroku
+</span></pre></div>
+</div>
+
+
+<p>The path to the <code>heroku</code> command should not be a Ruby gem directory.</p>
+
+<p>If it is, uninstall it and any other heroku gems:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> gem uninstall heroku --all
+</span></pre></div>
+</div>
+<div class="article-footer panel">
+<div class="nocontent keep-reading" id="keep-reading">
+<h3>
+<span class="icon-book-open"></span><a href="#keep-reading">Keep reading</a>
+</h3>
+<ul class="list-icons">
+<li>
+<span class="icon-files"></span><a href="/categories/command-line">Command Line</a>
+</li>
+<li>
+<span class="icon-file"></span><a href="/articles/authentication">Heroku CLI Authentication</a>
+</li>
+</ul>
+</div>
+<div class="article-feedback" id="feedback">
+<h3><a href="#feedback"><span class="icon-discussion"></span>Feedback</a></h3>
+<p><a href="/login?back_to=%2Farticles%2Fheroku-command-line&amp;utm_campaign=login&amp;utm_medium=feedback&amp;utm_source=web">Log in to submit feedback.</a></p>
+</div>
+</div></article></div>
+<div class="pagination">
+<a rel="prev" href="/articles/authentication">Heroku CLI Authentication</a><a rel="next" href="/articles/managing-add-ons">Managing Add-ons</a>
+</div>
+</div>
+<footer id="heroku-footer"><div class="wrapper">
+<div class="col heroku-footer-links">
+<nav class="col"><h4>Information &amp; Support</h4>
+<ul>
+<li><a href="/start">Getting Started</a></li>
+<li><a href="/categories/reference">Reference</a></li>
+<li><a href="/categories/learning">Learning</a></li>
+<li><a href="/changelog">Changelog</a></li>
+<li><a href="https://blog.heroku.com/">Blog</a></li>
+<li><a href="/articles/support-channels">Support Channels</a></li>
+<li><a href="https://status.heroku.com/">Status</a></li>
+</ul></nav><nav class="col"><h4>Language Reference</h4>
+<ul>
+<li><a href="/categories/nodejs">Node.js</a></li>
+<li><a href="/categories/ruby">Ruby</a></li>
+<li><a href="/categories/java">Java</a></li>
+<li><a href="/categories/php">PHP</a></li>
+<li><a href="/categories/python">Python</a></li>
+<li><a href="/categories/go">Go</a></li>
+<li><a href="/categories/scala">Scala</a></li>
+<li><a href="/categories/clojure">Clojure</a></li>
+</ul></nav><nav class="col"><h4>Other Resources</h4>
+<ul>
+<li><a href="https://www.heroku.com/careers">Careers</a></li>
+<li><a href="https://elements.heroku.com/">Elements</a></li>
+<li><a href="https://www.heroku.com/products">Products</a></li>
+<li><a href="https://www.heroku.com/pricing">Pricing</a></li>
+</ul></nav>
+</div>
+<div class="col heroku-footer-social">
+<h3>
+<span class="heroku-footer-icon-newsletter"></span>Subscribe to our monthly newsletter</h3>
+<form accept-charset="UTF-8" action="https://www.heroku.com/newsletter_signups" id="bookends-newsletter" method="post">
+<input name="utf8" type="hidden" value="✓"><input id="bookends-website" name="website" placeholder="do not fill this in" tabindex="-1" type="text"><input id="newsletter_signup_email" name="newsletter_signup[email]" placeholder="Your email address" required="required" type="email"><input name="commit" type="submit" value="Go"><p class="hide" id="bookends-newsletter-result"></p>
+</form>
+<ul class="social-list">
+<li class="has-dropdown">
+<a class="heroku-footer-icon-rss" href="http://feeds.feedburner.com/herokudevcenterarticles" target="_blank"> RSS</a><div class="dropdown"><ul>
+<li><a href="http://feeds.feedburner.com/herokudevcenterarticles" target="_blank"><span class="heroku-footer-icon-rss"></span>Dev Center Articles</a></li>
+<li><a href="http://feeds.feedburner.com/herokuchangelog" target="_blank"><span class="heroku-footer-icon-rss"></span>Dev Center Changelog</a></li>
+<li><a href="http://feeds2.feedburner.com/heroku" target="_blank"><span class="heroku-footer-icon-rss"></span>Heroku Blog</a></li>
+<li><a href="https://engineering.heroku.com/feed.xml" target="_blank"><span class="heroku-footer-icon-rss"></span>Engineering Blog</a></li>
+</ul></div>
+</li>
+<li class="has-dropdown">
+<a class="heroku-footer-icon-twitter" href="https://twitter.com/herokudevcenter" target="_blank"> Twitter</a><div class="dropdown"><ul>
+<li><a href="https://twitter.com/herokudevcenter" target="_blank"><span class="heroku-footer-icon-twitter"></span>Dev Center Articles</a></li>
+<li><a href="https://twitter.com/herokuchangelog" target="_blank"><span class="heroku-footer-icon-twitter"></span>Dev Center Changelog</a></li>
+<li><a href="https://twitter.com/heroku" target="_blank"><span class="heroku-footer-icon-twitter"></span>Heroku</a></li>
+<li><a href="https://twitter.com/herokustatus" target="_blank"><span class="heroku-footer-icon-twitter"></span>Heroku Status</a></li>
+</ul></div>
+</li>
+<li><a class="heroku-footer-icon-facebook" href="https://facebook.com/heroku" target="_blank"> Facebook</a></li>
+<li><a class="heroku-footer-icon-instagram" href="https://instagram.com/heroku" target="_blank"> Instagram</a></li>
+<li><a class="heroku-footer-icon-github" href="https://github.com/heroku" target="_blank"> Github</a></li>
+<li><a class="heroku-footer-icon-linkedin" href="https://www.linkedin.com/company/heroku" target="_blank"> LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="tertiary"><div class="wrapper">
+<div class="col"><a class="sfdc-logo" href="https://heroku.com/home" title="heroku.com">Heroku is a<span></span>company</a></div>
+<div class="col">
+<p class="copyright">©<script data-turbolinks-eval="false" type="text/javascript"> document.write(new Date().getFullYear());</script> Salesforce.com</p>
+<ul>
+<li><a href="https://heroku.com/home">heroku.com</a></li>
+<li><a href="https://heroku.com/policy/tos">Terms of Service</a></li>
+<li><a href="https://heroku.com/policy/privacy">Privacy</a></li>
+<li><a href="https://heroku.com/policy/privacy#web_site_navigational_information">Cookies</a></li>
+</ul>
+</div>
+</div></div></footer>
+</div>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-JD26" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-JD26');</script>
+<!-- End Google Tag Manager -->
+<script src="//d2f2p26ywennn8.cloudfront.net/assets/public-d133672cad2be0429b9b9c2f1f87e0a2d6f0b49a7750b020482fa379093b6cc6.js"></script>
+
+<!--[if lt IE 9]>
+<script src="//d2f2p26ywennn8.cloudfront.net/assets/public/vendor/selectivizr-1.0.min-5bcdad5ca1fd04e741f38ea80702024cb0b080f9e1763eb8fa4e79b1b6508b79.js"></script>
+<![endif]-->
+
+<script>
+  
+</script>
+<script>
+  
+</script>
+</body>
+</html>
